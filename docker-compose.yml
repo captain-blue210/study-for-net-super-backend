@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: study-for-net-super-db
+    image: oracle/database:11.2.0.2-xe
+    shm_size: 1g
+    restart: always
+    ports:
+      - 1521:1521
+    environment:
+      ORACLE_PWD: "PASSWORD"
+    volumes:
+      - "oradata:/u01/app/oracle/oradata"
+
+volumes:
+  oradata:
