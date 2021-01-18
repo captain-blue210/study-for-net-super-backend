@@ -1,5 +1,8 @@
-package captain.blue210.studyfornetsuperbackend.model.goods;
+package captain.blue210.studyfornetsuperbackend.domain.model.goods;
 
+import lombok.Getter;
+
+@Getter
 public class GoodsName {
   private final String goodsName;
 
@@ -14,10 +17,6 @@ public class GoodsName {
   }
 
   private static boolean isValidLength(String goodsName) {
-    return goodsName.length() > 0 && goodsName.length() <= 200;
-  }
-
-  public String getGoodsName() {
-    return this.goodsName;
+    return goodsName.length() > 0 && goodsName.length() <= 100;
   }
 }
